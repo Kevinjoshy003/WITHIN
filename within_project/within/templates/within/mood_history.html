@@ -1,0 +1,12 @@
+{% extends 'within/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Mood History</h2>
+<ul>
+    {% for mood in moods %}
+        <li>{{ mood.timestamp|date:"M d, Y H:i" }} - <strong>{{ mood.get_mood_display }}</strong>: {{ mood.note }}</li>
+    {% empty %}
+        <li>No mood entries yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

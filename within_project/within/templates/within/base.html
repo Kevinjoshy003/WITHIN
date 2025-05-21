@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Within - Mood Tracker</title>
+    <link rel="stylesheet" href="{% static 'within/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Within</a></h1>
+        <nav>
+            <a href="{% url 'log_mood' %}">Log Mood</a>
+            <a href="{% url 'mood_history' %}">Mood History</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

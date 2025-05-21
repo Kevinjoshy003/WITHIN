@@ -1,0 +1,10 @@
+{% extends 'within/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Log Your Mood</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="button">Submit</button>
+</form>
+{% endblock %}

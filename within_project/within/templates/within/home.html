@@ -1,0 +1,7 @@
+{% extends 'within/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Welcome to Within</h2>
+<p>Track your mood daily to reflect and grow.</p>
+<a href="{% url 'log_mood' %}" class="button">Log a Mood</a>
+{% endblock %}
